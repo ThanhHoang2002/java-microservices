@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    ports:
+      - '3636:3306'
+    environment:
+      - 'MYSQL_ROOT_PASSWORD=Hoang@2002'
+      - 'MYSQL_DATABASE=identity-db'
+      - 'MYSQL_USER=app-user'
+      - 'MYSQL_PASSWORD=app-password'
+  redis:
+    image: 'redis:latest'
+    ports:
+      - '3637:6379'
